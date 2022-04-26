@@ -25,8 +25,13 @@ void seq_search(int size, int key) {
 		list.insert(i - 1, rec);
 	}
 
+	Timer timer;
+	timer.reset();
 	if (search.sequential_search(list, key, position) == success) {
+		double time = timer.elapsed_time();
+		timer.reset();
 		cout << "Key found in position: " << position << endl;
+		cout << "Time: " << time << endl;
 	}
 
 	else {
@@ -46,9 +51,13 @@ void bin_search(int size, int key) {
 		rec.set_data(i);
 		list.insert(i - 1, rec);
 	}
-
+	Timer timer;
+	timer.reset();
 	if (search.binary_search_1(list, key, position) == success) {
+		double time = timer.elapsed_time();
+		timer.reset();
 		cout << "Key found in position: " << position << endl;
+		cout << "Time: " << time << endl;
 	}
 
 	else {
