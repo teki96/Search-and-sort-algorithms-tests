@@ -27,14 +27,15 @@ int chooseVersion()
 	int v;
 
 	while (true){
-	cout << "Test bed for search and / or sorting algorithms" << endl
-		<< "Choose version to run:" << endl
-		<< "1: Make sequential seach. (task 1)" << endl
-		<< "2: Make binary search (task 2)" << endl
-		<< flush;
+		cout << "Test bed for search and / or sorting algorithms" << endl
+			<< "Choose version to run:" << endl
+			<< "1: Make sequential seach. (task 1)" << endl
+			<< "2: Make binary search (task 2)" << endl
+			<< "2: Sort list with insertion sort (task 3)" << endl
+			<< flush;
 
 	if (cin >> v)
-		if (v == 1 || v == 2)
+		if (v == 1 || v == 2 || v == 3)
 			return v;
 
 		else

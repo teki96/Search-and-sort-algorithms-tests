@@ -3,7 +3,6 @@
 int main() {
 
 	int size, key;
-
 	int version = chooseVersion();
 
 	if (version == 1 || version == 2) {
@@ -14,20 +13,7 @@ int main() {
 		cin >> key;
 	}
 
-	if (version == 3) {
-		List<Record> list;
-		Random rand;
 
-		cout << "Enter size of the list: ";
-		cin >> size;
-		
-		//filling list with random integers between 1 and size of the list
-		for (int i = 0; i < size; ++i) {
-			Record r;
-			r = rand.random_integer(1, size);
-			list.insert(i, r);
-		}
-	}
 
 	switch (version) {
 	case 1:
@@ -39,7 +25,7 @@ int main() {
 		break;
 
 	case 3:
-		//insertion sort with randomized data
+		ins_sort();
 		break;
 
 	case 4:

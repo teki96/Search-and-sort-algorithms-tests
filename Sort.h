@@ -1,11 +1,11 @@
 #pragma once
-
+#include "List.h"
+#include "Node.h"
 template <class Record>
 class Sortable_list :public List<Record> {
 public:
-	Sortable_list();
-	void insertion_sort(List<Record>& list);
-private:
+    Sortable_list();
+    void insertion_sort(Sortable_list<Record>& list);
 
 };
 
@@ -15,7 +15,7 @@ inline Sortable_list<Record>::Sortable_list()
 }
 
 template <class Record>
-void Sortable_list<Record>::insertion_sort(List<Record>& list)
+inline void Sortable_list<Record>::insertion_sort(Sortable_list<Record>& list)
 /*
 Post: The entries of the Sortable_list have been rearranged so that
       the keys in all the  entries are sorted into nondecreasing order.
