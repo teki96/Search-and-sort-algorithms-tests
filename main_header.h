@@ -6,20 +6,20 @@
 #include "RANDOM.h"
 #include "Record.h"
 #include "Search.h"
+#include "Sort.h"
 #include "Timer.h"
 #include "Utility.h"
 
 using namespace std;
 
 //Sequential search test (task 1)
-void seq_search(int size, int key) {
+void seq_search(const int& size, const int& key) {
 
 	List<Record> list;
 	Search search;
 	int position;
 
 	for (int i = 1; i <= size; ++i) {
-		int x = i * 2 - 1;
 		Record rec;
 		rec.set_data(i);
 		list.insert(i - 1, rec);
@@ -39,14 +39,13 @@ void seq_search(int size, int key) {
 	}
 }
 
-void bin_search(int size, int key) {
+void bin_search(const int& size, const int& key) {
 
 	List<Record> list;
 	Search search;
 	int position;
 
 	for (int i = 1; i <= size; ++i) {
-		int x = i * 2 - 1;
 		Record rec;
 		rec.set_data(i);
 		list.insert(i - 1, rec);
@@ -63,6 +62,9 @@ void bin_search(int size, int key) {
 	else {
 		cout << "Key was not found in the list." << endl;
 	}
+}
 
+void ins_sort(const List<Record>& list, const int& size) {
 
+	
 }
