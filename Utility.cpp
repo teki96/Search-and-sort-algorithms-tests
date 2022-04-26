@@ -30,7 +30,7 @@ int chooseVersion()
 	cout << "Test bed for search and / or sorting algorithms" << endl
 		<< "Choose version to run:" << endl
 		<< "1: Make sequential seach. (task 1)" << endl
-		//<< "2: Make binary search (task 2)" << endl
+		<< "2: Make binary search (task 2)" << endl
 		<< flush;
 
 	if (cin >> v)

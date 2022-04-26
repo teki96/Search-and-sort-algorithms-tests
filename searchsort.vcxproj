@@ -143,7 +143,6 @@
     <ClInclude Include="List.h" />
     <ClInclude Include="main_header.h" />
     <ClInclude Include="Node.h" />
-    <ClInclude Include="Ordered_list.h" />
     <ClInclude Include="RANDOM.h" />
     <ClInclude Include="Record.h" />
     <ClInclude Include="Search.h" />
@@ -153,7 +152,6 @@
   <ItemGroup>
     <ClCompile Include="Key.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Ordered_list.cpp" />
     <ClCompile Include="RANDOM.cpp" />
     <ClCompile Include="Record.cpp" />
     <ClCompile Include="Search.cpp" />

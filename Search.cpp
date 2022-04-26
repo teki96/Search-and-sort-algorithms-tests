@@ -21,7 +21,7 @@ Post: If an entry in the_list has key equal to target, then return
     return not_present;
 }
 
-Error_code Search::binary_search_1(const Ordered_list& the_list, const Key& target, int& position)
+Error_code Search::binary_search_1(const List<Record>& the_list, const Key& target, int& position)
 /*
 Post: If a Record in the_list  has Key equal to target, then position locates
       one such entry and a code of success is returned.

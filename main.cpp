@@ -20,7 +20,7 @@ int main() {
 		break;
 
 	case 2:
-		//binary search
+		bin_search(size, key);
 		break;
 
 	case 3:
