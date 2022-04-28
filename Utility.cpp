@@ -31,11 +31,12 @@ int chooseVersion()
 			<< "Choose version to run:" << endl
 			<< "1: Make sequential seach. (task 1)" << endl
 			<< "2: Make binary search (task 2)" << endl
-			<< "2: Sort list with insertion sort (task 3)" << endl
+			<< "3: Sort list with insertion sort (task 3)" << endl
+			<< "4: Sort list with quick sort (task 4)" << endl
 			<< flush;
 
 	if (cin >> v)
-		if (v == 1 || v == 2 || v == 3)
+		if (v == 1 || v == 2 || v == 3 || v == 4)
 			return v;
 
 		else

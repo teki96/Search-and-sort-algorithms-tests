@@ -32,6 +32,7 @@ int main() {
 		//sorting performance with randomized data
 
 	default:
+		quickSort();
 		break;
 	}
 }

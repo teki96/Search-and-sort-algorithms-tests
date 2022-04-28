@@ -92,10 +92,11 @@ void ins_sort() {
 		list.retrieve(i, r);
 		cout << r.get_key_data() << " ";
 	}
+	system("pause");
 	}
 
 
-	system("pause");
+	
 
 	timer.reset();
 	list.insertion_sort(list);
@@ -103,7 +104,7 @@ void ins_sort() {
 	timer.reset();
 
 	cout << "List is now sorted" << endl
-		 << "Time: " << " seconds" << endl;
+		 << "Time: " << time << " seconds" << endl;
 
 		cout << "Print first 100 values from sorted list?" << endl;
 
@@ -115,4 +116,58 @@ void ins_sort() {
 			}
 		}
 	
+}
+
+
+//Merge sort performance (task 3)
+void quickSort() {
+
+	Timer timer;
+	Record r;
+	Random rand;
+	Sortable_list<Record> list;
+	int size;
+
+	cout << "Enter size of the list: ";
+	cin >> size;
+
+	//filling list with random integers between 1 and size of the list
+	for (int i = 0; i < size; ++i) {
+		Record r;
+		r = rand.random_integer(1, size);
+		list.insert(i, r);
+	}
+
+	cout << "Print first 100 values from unsorted list?" << endl;
+
+	if (user_says_yes()) {
+		cout << "First 100 values from the list unsorted:" << endl;
+		for (int i = 0; i < 100; ++i) {
+			list.retrieve(i, r);
+			cout << r.get_key_data() << " ";
+		}
+		system("pause");
+	}
+
+
+	
+
+	timer.reset();
+	list.quick_sort(list);
+	double time = timer.elapsed_time();
+	timer.reset();
+
+	cout << "List is now sorted" << endl
+		<< "Time: " << time << " seconds" << endl;
+
+	cout << "Print first 100 values from sorted list?" << endl;
+
+	if (user_says_yes()) {
+		cout << "First 100 values from sorted list: " << endl;
+		for (int i = 0; i < 100; ++i) {
+			list.retrieve(i, r);
+			cout << r.get_key_data() << " ";
+		}
+	}
+
 }
