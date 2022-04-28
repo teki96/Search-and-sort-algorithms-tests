@@ -13,11 +13,17 @@
 using namespace std;
 
 //Sequential search performance (task 1)
-void seq_search(const int& size, const int& key) {
+void seq_search() {
 
 	List<Record> list;
 	Search search;
-	int position;
+	int position, size, key;
+
+	cout << "Enter size of the list: ";
+	cin >> size;
+
+	cout << "Number to search from the list: ";
+	cin >> key;
 
 	for (int i = 1; i <= size; ++i) {
 		Record rec;
@@ -40,11 +46,17 @@ void seq_search(const int& size, const int& key) {
 }
 
 //Binary search performance (task 2)
-void bin_search(const int& size, const int& key) {
+void bin_search() {
 
 	List<Record> list;
 	Search search;
-	int position;
+	int position, size, key;
+
+	cout << "Enter size of the list: ";
+	cin >> size;
+
+	cout << "Number to search from the list: ";
+	cin >> key;
 
 	for (int i = 1; i <= size; ++i) {
 		Record rec;
@@ -95,9 +107,6 @@ void ins_sort() {
 	system("pause");
 	}
 
-
-	
-
 	timer.reset();
 	list.insertion_sort(list);
 	double time = timer.elapsed_time();
@@ -115,11 +124,9 @@ void ins_sort() {
 				cout << r.get_key_data() << " ";
 			}
 		}
-	
 }
 
-
-//Merge sort performance (task 3)
+//Quick sort performance (task 4)
 void quickSort() {
 
 	Timer timer;
@@ -148,9 +155,6 @@ void quickSort() {
 		}
 		system("pause");
 	}
-
-
-	
 
 	timer.reset();
 	list.quick_sort(list);
